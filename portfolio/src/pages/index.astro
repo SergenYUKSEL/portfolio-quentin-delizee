@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.vue';
+import About from '../components/About.vue';
+import Skills from '../components/Skills.vue';
+import Projects from '../components/Projects.vue';
+---
+
+<Layout>
+	<main>
+		<Hero client:load />
+		<About client:visible />
+		<Skills client:visible />
+		<Projects client:visible />
+	</main>
+</Layout>
