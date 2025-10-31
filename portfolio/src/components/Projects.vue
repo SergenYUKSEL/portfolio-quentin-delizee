@@ -37,12 +37,6 @@ const projects: Project[] = [
 const { isVisible, elementRef } = useScrollAnimation(0.1);
 const cardRefs = ref<HTMLElement[]>([]);
 
-onMounted(() => {
-  if (isVisible.value) {
-    animateCards();
-  }
-});
-
 const animateCards = () => {
   cardRefs.value.forEach((card, index) => {
     if (card) {
@@ -53,14 +47,18 @@ const animateCards = () => {
   });
 };
 
-// Watch for visibility changes
-const observer = new MutationObserver(() => {
-  if (isVisible.value && cardRefs.value.length > 0) {
+onMounted(() => {
+  if (isVisible.value) {
     animateCards();
   }
-});
-
-onMounted(() => {
+  
+  // Watch for visibility changes
+  const observer = new MutationObserver(() => {
+    if (isVisible.value && cardRefs.value.length > 0) {
+      animateCards();
+    }
+  });
+  
   if (elementRef.value) {
     observer.observe(elementRef.value, { attributes: true });
   }
@@ -68,7 +66,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="projects" ref="elementRef" class="projects" :class="{ 'is-visible': isVisible }">
+  <div ref="elementRef" class="projects" :class="{ 'is-visible': isVisible }">
     <div class="container">
       <h2 class="section-title">Mes Projets</h2>
       <div class="projects-grid">
@@ -87,7 +85,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-  <section id="about" ref="elementRef" class="about">
+  <div ref="elementRef" class="about">
     <div class="container">
       <h2 class="section-title">À Propos</h2>
       <div 
@@ -14,7 +14,7 @@
         </p>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">

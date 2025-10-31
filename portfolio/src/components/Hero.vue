@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <div class="hero">
     <div class="hero-content">
       <h1 class="hero-name animate-fade-in-up stagger-1">
         Quentin Delizee
@@ -12,7 +12,7 @@
         <ChevronDown class="scroll-icon animate-bounce" :size="24" />
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">

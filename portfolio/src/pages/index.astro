@@ -8,13 +8,26 @@ import Contact from '../components/Contact.vue';
 import Footer from '../components/Footer.vue';
 ---
 
-<Layout>
+<Layout 
+	title="Quentin Delizee - Développeur Full Stack"
+	description="Portfolio de Quentin Delizee, développeur full stack passionné par les technologies web modernes comme React, Node.js, Express, MongoDB et les outils IA."
+>
 	<main>
-		<Hero client:load />
-		<About client:visible />
-		<Skills client:visible />
-		<Projects client:visible />
-		<Contact client:visible />
+		<section id="hero">
+			<Hero client:load />
+		</section>
+		<section id="about">
+			<About client:visible />
+		</section>
+		<section id="skills">
+			<Skills client:visible />
+		</section>
+		<section id="projects">
+			<Projects client:visible />
+		</section>
+		<section id="contact">
+			<Contact client:visible />
+		</section>
 	</main>
 	<Footer />
 </Layout>

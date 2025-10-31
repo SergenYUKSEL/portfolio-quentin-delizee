@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" ref="elementRef" class="contact">
+  <div ref="elementRef" class="contact">
     <div class="container">
       <h2 class="section-title">Contactez-moi</h2>
       <div 
@@ -38,7 +38,7 @@
         </a>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">

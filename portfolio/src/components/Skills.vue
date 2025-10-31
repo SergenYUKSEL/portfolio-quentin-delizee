@@ -1,5 +1,5 @@
 <template>
-  <section id="skills" class="skills">
+  <div class="skills">
     <div class="container">
       <h2 class="section-title">Compétences</h2>
       <div class="skills-grid">
@@ -13,7 +13,7 @@
         />
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">

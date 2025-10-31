@@ -63,7 +63,7 @@
   - Assurer que le footer reste en bas de page
   - _Requirements: 8.1, 8.2, 8.3_
 
-- [ ] 9. Assembler la page d'accueil
+- [x] 9. Assembler la page d'accueil
   - Modifier index.astro pour importer et utiliser Layout.astro
   - Intégrer tous les composants dans l'ordre (Hero, About, Skills, Projects, Contact, Footer)
   - Configurer les attributs client:load ou client:visible pour les composants Vue
