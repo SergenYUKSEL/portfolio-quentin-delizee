@@ -1,7 +1,7 @@
 <template>
   <div ref="elementRef" class="skill-card" :class="{ 'is-visible': isVisible }">
-    <div class="skill-icon">
-      <component :is="iconComponent" :size="32" :stroke-width="2" />
+    <div class="skill-icon" :aria-label="`Icône ${name}`" role="img">
+      <component :is="iconComponent" :size="32" :stroke-width="2" aria-hidden="true" />
     </div>
     <h3 class="skill-name">{{ name }}</h3>
     <span class="skill-category">{{ category }}</span>

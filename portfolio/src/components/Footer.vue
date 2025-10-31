@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="copyright">© 2025 Quentin Delizee - Portfolio Personnel</p>
     </div>
@@ -32,7 +32,7 @@
   .footer {
     padding: var(--spacing-lg) 0;
   }
-  
+
   .copyright {
     font-size: var(--font-size-xs);
   }

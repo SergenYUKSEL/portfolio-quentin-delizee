@@ -7,10 +7,14 @@
       <p class="hero-title animate-fade-in-up stagger-2">
         Développeur Full Stack
       </p>
-      <div class="scroll-indicator animate-fade-in stagger-4">
+      <a 
+        href="#about" 
+        class="scroll-indicator animate-fade-in stagger-4"
+        aria-label="Faire défiler vers la section À propos"
+      >
         <span class="scroll-text">Découvrir</span>
-        <ChevronDown class="scroll-icon animate-bounce" :size="24" />
-      </div>
+        <ChevronDown class="scroll-icon animate-bounce" :size="24" aria-hidden="true" />
+      </a>
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div ref="elementRef" class="contact">
     <div class="container">
-      <h2 class="section-title">Contactez-moi</h2>
+      <h2 id="contact-title" class="section-title">Contactez-moi</h2>
       <div 
         class="contact-links"
         :class="{ 'animate-fade-in': isVisible }"
@@ -11,7 +11,7 @@
           class="contact-link"
           aria-label="Envoyer un email à Quentin Delizee"
         >
-          <Mail class="contact-icon" :size="24" />
+          <Mail class="contact-icon" :size="24" aria-hidden="true" />
           <span class="contact-text">quentin.delizee1@gmail.com</span>
         </a>
         
@@ -22,7 +22,7 @@
           class="contact-link"
           aria-label="Visiter le profil GitHub de Quentin Delizee"
         >
-          <Github class="contact-icon" :size="24" />
+          <Github class="contact-icon" :size="24" aria-hidden="true" />
           <span class="contact-text">GitHub</span>
         </a>
         
@@ -33,7 +33,7 @@
           class="contact-link"
           aria-label="Visiter le profil LinkedIn de Quentin Delizee"
         >
-          <Linkedin class="contact-icon" :size="24" />
+          <Linkedin class="contact-icon" :size="24" aria-hidden="true" />
           <span class="contact-text">LinkedIn</span>
         </a>
       </div>

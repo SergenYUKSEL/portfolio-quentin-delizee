@@ -1,7 +1,7 @@
 <template>
   <div class="skills">
     <div class="container">
-      <h2 class="section-title">Compétences</h2>
+      <h2 id="skills-title" class="section-title">Compétences</h2>
       <div class="skills-grid">
         <SkillCard 
           v-for="(skill, index) in skills" 

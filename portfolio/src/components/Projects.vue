@@ -68,7 +68,7 @@ onMounted(() => {
 <template>
   <div ref="elementRef" class="projects" :class="{ 'is-visible': isVisible }">
     <div class="container">
-      <h2 class="section-title">Mes Projets</h2>
+      <h2 id="projects-title" class="section-title">Mes Projets</h2>
       <div class="projects-grid">
         <div
           v-for="(project, index) in projects"

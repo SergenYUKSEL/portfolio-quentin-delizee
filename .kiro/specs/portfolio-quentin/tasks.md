@@ -71,7 +71,7 @@
   - Implémenter le smooth scroll global
   - _Requirements: 1.1, 6.4_
 
-- [ ] 10. Optimiser l'accessibilité et les performances
+- [x] 10. Optimiser l'accessibilité et les performances
   - Ajouter les attributs alt pour toutes les images et icônes
   - Vérifier la structure sémantique HTML (nav, main, section, article)
   - Implémenter la media query prefers-reduced-motion

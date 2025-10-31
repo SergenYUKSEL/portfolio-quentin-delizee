@@ -1,7 +1,7 @@
 <template>
   <div ref="elementRef" class="about">
     <div class="container">
-      <h2 class="section-title">À Propos</h2>
+      <h2 id="about-title" class="section-title">À Propos</h2>
       <div 
         class="about-content"
         :class="{ 'animate-slide-in-right': isVisible }"
