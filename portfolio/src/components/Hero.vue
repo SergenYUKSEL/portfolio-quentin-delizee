@@ -32,6 +32,8 @@ import { ChevronDown } from 'lucide-vue-next';
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
+  padding-top: var(--spacing-2xl);
+  
   
   /* Gradient background */
   background: linear-gradient(
@@ -45,9 +47,8 @@ import { ChevronDown } from 'lucide-vue-next';
   background-image: 
     linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-secondary) 50%, var(--color-bg) 100%),
     radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
-}
-
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transpare
+)}
 .hero-content {
   text-align: center;
   padding: var(--spacing-lg);

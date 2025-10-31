@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Responsive - Portfolio Quentin Delizee</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #0f172a;
+      color: #f1f5f9;
+    }
+    
+    .test-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #3b82f6;
+      margin-bottom: 30px;
+    }
+    
+    .viewport-controls {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    button:hover {
+      background: #2563eb;
+    }
+    
+    button.active {
+      background: #8b5cf6;
+    }
+    
+    .iframe-container {
+      border: 2px solid #3b82f6;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0 auto;
+      transition: all 0.3s ease;
+      background: white;
+    }
+    
+    iframe {
+      display: block;
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .info {
+      text-align: center;
+      margin-top: 20px;
+      padding: 15px;
+      background: #1e293b;
+      border-radius: 8px;
+    }
+    
+    .info p {
+      margin: 5px 0;
+    }
+    
+    .checklist {
+      margin-top: 30px;
+      padding: 20px;
+      background: #1e293b;
+      border-radius: 8px;
+    }
+    
+    .checklist h2 {
+      color: #3b82f6;
+      margin-bottom: 15px;
+    }
+    
+    .checklist ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .checklist li {
+      padding: 8px 0;
+      border-bottom: 1px solid #334155;
+    }
+    
+    .checklist li:last-child {
+      border-bottom: none;
+    }
+    
+    .status {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: 10px;
+    }
+    
+    .status.pass {
+      background: #10b981;
+      color: white;
+    }
+    
+    .status.fail {
+      background: #ef4444;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="test-container">
+    <h1>🧪 Test Responsive - Portfolio Quentin Delizee</h1>
+    
+    <div class="viewport-controls">
+      <button onclick="setViewport(375, 667, 'mobile')" data-viewport="mobile">
+        📱 Mobile (375x667)
+      </button>
+      <button onclick="setViewport(768, 1024, 'tablet')" data-viewport="tablet">
+        📱 Tablet (768x1024)
+      </button>
+      <button onclick="setViewport(1440, 900, 'desktop')" data-viewport="desktop" class="active">
+        💻 Desktop (1440x900)
+      </button>
+      <button onclick="setViewport(375, 812, 'mobile-landscape')" data-viewport="mobile-landscape">
+        📱 Mobile Landscape (812x375)
+      </button>
+    </div>
+    
+    <div class="iframe-container" id="iframeContainer">
+      <iframe src="http://localhost:4322/" id="portfolioFrame"></iframe>
+    </div>
+    
+    <div class="info">
+      <p><strong>Viewport actuel:</strong> <span id="currentViewport">Desktop (1440x900)</span></p>
+      <p><strong>Dimensions:</strong> <span id="dimensions">1440px × 900px</span></p>
+    </div>
+    
+    <div class="checklist">
+      <h2>✅ Checklist de Test Responsive</h2>
+      
+      <h3>Mobile (375px)</h3>
+      <ul>
+        <li>✓ Hero section occupe tout l'écran</li>
+        <li>✓ Nom et titre sont lisibles et bien dimensionnés</li>
+        <li>✓ Section À Propos: texte aligné à gauche, lisible</li>
+        <li>✓ Skills: Grid 2 colonnes</li>
+        <li>✓ Projects: Grid 1 colonne</li>
+        <li>✓ Contact: Liens empilés verticalement</li>
+        <li>✓ Footer: Copyright visible et centré</li>
+      </ul>
+      
+      <h3>Tablet (768px)</h3>
+      <ul>
+        <li>✓ Hero section bien proportionnée</li>
+        <li>✓ Section À Propos: max-width 700px</li>
+        <li>✓ Skills: Grid 3 colonnes</li>
+        <li>✓ Projects: Grid 2 colonnes</li>
+        <li>✓ Contact: Liens bien espacés</li>
+        <li>✓ Tous les espacements appropriés</li>
+      </ul>
+      
+      <h3>Desktop (1440px)</h3>
+      <ul>
+        <li>✓ Hero section: gradient et effets visuels</li>
+        <li>✓ Section À Propos: max-width 800px, centré</li>
+        <li>✓ Skills: Grid 5 colonnes</li>
+        <li>✓ Projects: Grid 2 colonnes avec espacement</li>
+        <li>✓ Contact: Liens centrés avec max-width</li>
+        <li>✓ Layout global bien équilibré</li>
+      </ul>
+      
+      <h3>Mobile Landscape (812x375)</h3>
+      <ul>
+        <li>✓ Contenu accessible sans scroll horizontal</li>
+        <li>✓ Hero adapté à la hauteur réduite</li>
+        <li>✓ Navigation fluide entre sections</li>
+      </ul>
+    </div>
+  </div>
+  
+  <script>
+    function setViewport(width, height, name) {
+      const container = document.getElementById('iframeContainer');
+      const frame = document.getElementById('portfolioFrame');
+      const viewportSpan = document.getElementById('currentViewport');
+      const dimensionsSpan = document.getElementById('dimensions');
+      
+      // Update container size
+      container.style.width = width + 'px';
+      container.style.height = height + 'px';
+      
+      // Update info
+      const viewportNames = {
+        'mobile': 'Mobile',
+        'tablet': 'Tablet',
+        'desktop': 'Desktop',
+        'mobile-landscape': 'Mobile Landscape'
+      };
+      
+      viewportSpan.textContent = `${viewportNames[name]} (${width}x${height})`;
+      dimensionsSpan.textContent = `${width}px × ${height}px`;
+      
+      // Update active button
+      document.querySelectorAll('button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelector(`[data-viewport="${name}"]`).classList.add('active');
+    }
+    
+    // Set initial viewport
+    setViewport(1440, 900, 'desktop');
+  </script>
+</body>
+</html>

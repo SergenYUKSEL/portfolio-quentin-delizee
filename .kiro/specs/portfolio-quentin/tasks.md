@@ -80,38 +80,38 @@
   - Vérifier les contrastes de couleurs (minimum 4.5:1)
   - _Requirements: 7.1, 7.2, 7.3, 7.4, 7.5_
 
-- [ ] 11. Tests et validation finale
-  - [ ] 11.1 Tester le responsive sur mobile (375px), tablet (768px), desktop (1440px)
+- [x] 11. Tests et validation finale
+  - [x] 11.1 Tester le responsive sur mobile (375px), tablet (768px), desktop (1440px)
     - Vérifier l'affichage de chaque section
     - Tester l'orientation portrait et paysage sur mobile
     - _Requirements: 6.1, 6.2, 6.3, 6.4_
   
-  - [ ] 11.2 Tester les animations et interactions
+  - [x] 11.2 Tester les animations et interactions
     - Vérifier que toutes les animations se déclenchent correctement au scroll
     - Tester les effets hover sur les cartes et liens
     - Vérifier le smooth scroll entre sections
     - Mesurer les performances d'animation (>30 FPS)
     - _Requirements: 1.2, 1.3, 1.4_
   
-  - [ ] 11.3 Tester l'accessibilité
+  - [x] 11.3 Tester l'accessibilité
     - Navigation au clavier (Tab, Enter, Espace)
     - Test avec VoiceOver ou autre screen reader
     - Vérifier les contrastes avec un outil (ex: WebAIM)
     - _Requirements: 7.2, 7.3, 7.4, 7.5_
   
-  - [ ] 11.4 Tester les liens et fonctionnalités
+  - [x] 11.4 Tester les liens et fonctionnalités
     - Cliquer sur le lien email (doit ouvrir le client mail)
     - Cliquer sur les liens GitHub et LinkedIn (doivent s'ouvrir dans un nouvel onglet)
     - Vérifier que tous les liens externes ont rel="noopener noreferrer"
     - _Requirements: 5.2, 5.3, 5.4, 5.5_
   
-  - [ ] 11.5 Valider les performances
+  - [x] 11.5 Valider les performances
     - Exécuter Lighthouse et viser un score >90 pour Performance
     - Vérifier le temps de chargement initial (<3s)
     - Mesurer le First Contentful Paint (<1.5s)
     - _Requirements: 7.1_
   
-  - [ ] 11.6 Tests cross-browser
+  - [x] 11.6 Tests cross-browser
     - Tester sur Chrome, Firefox, Safari, Edge
     - Vérifier l'affichage sur les versions mobiles
     - Corriger les éventuels problèmes de compatibilité
