@@ -48,7 +48,7 @@
   - Gérer l'affichage du badge "en cours" pour le projet cybersécurité
   - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 6.1, 6.2, 6.3_
 
-- [ ] 7. Implémenter la section Contact
+- [x] 7. Implémenter la section Contact
   - Créer le composant Contact.vue avec les 3 liens (email, GitHub, LinkedIn)
   - Implémenter les liens cliquables avec attributs appropriés (mailto, target="_blank", rel)
   - Ajouter les icônes pour chaque type de contact
@@ -57,7 +57,7 @@
   - Styler la section avec espacement et alignement appropriés
   - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5, 5.6_
 
-- [ ] 8. Implémenter le Footer
+- [x] 8. Implémenter le Footer
   - Créer le composant Footer.vue avec le texte de copyright
   - Styler le footer avec background et espacement appropriés
   - Assurer que le footer reste en bas de page

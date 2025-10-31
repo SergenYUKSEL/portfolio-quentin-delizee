@@ -49,6 +49,15 @@ const {
   </body>
 </html>
 
-<style>
-  /* Scoped styles for layout if needed */
+<style is:global>
+  /* Ensure footer stays at bottom of page */
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
 </style>
